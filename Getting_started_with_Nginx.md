@@ -8,7 +8,7 @@ Nginx is a web server that serves static content (HTML, images, etc.) to web bro
 - Mail proxy
 
 ---
-## Why use Nginx over HTTPd (Apache)?
+## 📊 Why use Nginx over HTTPd (Apache)?
 - Nginx handles many users at once more efficiently than Apache.
 - Nginx uses an event-driven model, which is faster and uses less memory.
 - Apache (httpd) uses a process/thread-based model, which can be heavier under load.
