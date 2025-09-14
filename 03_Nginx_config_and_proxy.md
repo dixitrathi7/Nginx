@@ -1,4 +1,4 @@
-# 📘 Understanding Nginx Configuration Files
+# Section 3: 📘 Understanding Nginx Configuration Files
 
 ### 📁 1. Nginx Configuration Directory: /etc/nginx/
 
