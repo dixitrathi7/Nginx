@@ -1,7 +1,7 @@
 ## 📘What is Nginx?
 Nginx is a web server that serves static content (HTML, images, etc.) to web browsers. It also provides additional features like reverse proxy, load balancing, and HTTP caching.
 
-### Features of Nginx:
+### 💡 Features of Nginx:
 - A reverse proxy
 - Load balancer
 - HTTP cache
