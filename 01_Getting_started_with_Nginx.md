@@ -25,6 +25,7 @@ when a worker process initiates an I/O operation (like reading from a disk or ne
 
 Nginx's Answer: The Event-Driven, Asynchronous, Non-Blocking Architecture
 Nginx elegantly solves the C10K problem by using a event-driven architecture. Instead of a process per connection, it uses a small number of highly efficient worker processes that handle thousands of connections simultaneously.
+
 ---
 
 ## 🧰 Common DevOps Use Cases for NGINX
