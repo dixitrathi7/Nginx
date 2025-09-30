@@ -19,6 +19,12 @@ Nginx is a web server that serves static content (HTML, images, etc.) to web bro
 **Event-Driven Model(Nginx):**
 when a worker process initiates an I/O operation (like reading from a disk or network socket), it does not wait for the operation to complete. Instead, it registers a callback and continues to process other tasks. When the I/O operation finishes, the callback is triggered, and the worker process handles the result. This prevents blocking and allows a single worker to manage many connections simultaneously.
 
+### The Core Problem: The C10K Problem
+
+**The C10K Problem**, This was the challenge of handling ten thousand concurrent connections on a single server. Traditional web servers (like Apache in its initial prefork mode) used a "one process per connection" or "one thread per connection" model. Creating a process/thread for each connection is expensive in terms of memory and CPU context-switching. At ten thousand connections, the server would grind to a halt.
+
+Nginx's Answer: The Event-Driven, Asynchronous, Non-Blocking Architecture
+Nginx elegantly solves the C10K problem by using a event-driven architecture. Instead of a process per connection, it uses a small number of highly efficient worker processes that handle thousands of connections simultaneously.
 ---
 
 ## 🧰 Common DevOps Use Cases for NGINX
