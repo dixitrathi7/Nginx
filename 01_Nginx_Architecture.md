@@ -86,3 +86,35 @@ Here’s a simplified flow of how it works:
 > 🚀 This is why NGINX is the go-to choice for modern, high-performance web servers.
 
 ---
+### 📊 Visual Summary: NGINX Architecture (Master-Worker Model)
+
+```text
+                    +-----------------------+
+                    |     MASTER PROCESS    |
+                    |  (runs as root user)  |
+                    +-----------------------+
+                    | - Reads configuration |
+                    | - Binds to ports      |
+                    |   (80, 443, etc.)     |
+                    | - Spawns workers      |
+                    | - Handles reloads     |
+                    +----------+------------+
+                               |
+              (manages & signals worker processes)
+                               |
+        +----------------------+----------------------+
+        |                      |                      |
++-------+--------+    +--------+-------+    +---------+-------+
+| WORKER PROCESS |    | WORKER PROCESS |    | WORKER PROCESS  |
+| (unprivileged) |    | (unprivileged) |    | (unprivileged)  |
++----------------+    +----------------+    +-----------------+
+| * Event Loop   |    | * Event Loop   |    | * Event Loop    |
+| * Handles      |    | * Handles      |    | * Handles       |
+|   thousands    |    |   thousands    |    |   thousands     |
+|   of requests  |    |   of requests  |    |   of requests   |
++----------------+    +----------------+    +-----------------+
+        ^                      ^                      ^
+        |                      |                      |
+        v                      v                      v
+   [ Shared Socket :80 ]  [ Shared Socket :80 ]  [ Shared Socket :80 ]
+     (OS distributes incoming TCP connections across workers)
