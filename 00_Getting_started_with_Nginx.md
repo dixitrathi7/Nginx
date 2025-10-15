@@ -1,4 +1,9 @@
 # 📘 Section 1: Nginx Overview 
+
+## What is a Web Server?
+A web server is a software application that stores, processes, and delivers web content (such as web pages, images, videos, or other files) to users over the internet. It responds to requests from clients, typically web browsers, using the Hypertext Transfer Protocol (HTTP) or its secure variant (HTTPS).
+
+
 ## What is Nginx?
 Nginx is a web server that serves static content (HTML, images, etc.) to web browsers. It also provides additional features like reverse proxy, load balancing, and HTTP caching.
 
@@ -6,9 +11,13 @@ Nginx is a web server that serves static content (HTML, images, etc.) to web bro
 - A reverse proxy
 - Load balancer
 - HTTP cache
-- Mail proxy
+- Security (SSL/TSL)
 
 ---
+## Working of Apache HTTPd:
+Apache HTTPd (often just called Apache) is a traditional web server that follows a process-driven or thread-based architecture. This means it handles incoming requests by creating separate processes or threads for each connection, providing strong isolation but at the cost of resource efficiency.
+**Connection Management:** Supports keep-alive (persistent connections) to reuse processes/threads for multiple requests from the same client, reducing overhead, After handling the request (or a series via keep-alive), the process/thread may idle or terminate based on configuration.
+
 ## 📊 Why use Nginx over HTTPd (Apache)?
 - Nginx handles many users at once more efficiently than Apache.
 - Nginx uses an event-driven model, which is faster and uses less memory.
