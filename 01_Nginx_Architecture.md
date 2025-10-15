@@ -117,4 +117,4 @@ Here’s a simplified flow of how it works:
         |                      |                      |
         v                      v                      v
    [ Shared Socket :80 ]  [ Shared Socket :80 ]  [ Shared Socket :80 ]
-     (OS distributes incoming TCP connections across workers)
+     (distributes incoming TCP connections across workers)
