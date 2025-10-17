@@ -81,6 +81,10 @@ server {
 
         server_name mysite.com;
 
+        # Access and error logs
+        access_log /var/log/nginx/nginx.refactorq.com.access.log;
+        error_log /var/log/nginx/nginx.refactorq.com.error.log
+
         location / {
                 proxy_pass http://localhost:3000;
 
