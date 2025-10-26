@@ -81,9 +81,10 @@
    - The CA’s digital signature (which proves it was issued by a trusted authority)
 
 📘 **Conceptually:**
+```
 SSL Certificate = Server Public Key + Domain Name + CA Signature
 CA Signature = Server Public Key + CA Public Key
-
+```
 
 ---
 
